@@ -7,6 +7,19 @@ def is_goal(s):
 def successors(s):
     x, y, z = s
     
+        #empty 8L
+    if x>0:
+        yield((0,y,z),x)
+        
+    #empty 8L
+    if y>0:
+        yield((x,0,z),y)
+    
+    #empty 8L
+    if z>0:
+        yield((x,y,0),z)
+    
+    
     #fill 8L from 5L
     if y>0 and x<8:
         t= min(y, 8-x)
@@ -37,18 +50,7 @@ def successors(s):
         t=min(y,3-z)
         yield((x,y-t,z+t),t)
     
-    #empty 8L
-    if x>0:
-        yield((0,y,z),x)
-        
-    #empty 8L
-    if y>0:
-        yield((x,0,z),y)
-    
-    #empty 8L
-    if z>0:
-        yield((x,y,0),z)
-    
+
     
     
     
