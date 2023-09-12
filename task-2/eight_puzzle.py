@@ -2,7 +2,8 @@ import copy
 
 
 def initial_state():
-    return ((7, 2, 4, 5, 0, 6, 8, 3, 1), 1, 1)
+     return ((7, 2, 4, 5, 0, 6, 8, 3, 1), 1, 1)
+    
 
 
 def is_goal(s):
