@@ -50,5 +50,17 @@ def h1(s):
 
 def h3(s):
     # implement this function
+    column_move =0
+    row_move =0
+    h_move=0
+    
+    goal = (1, 2, 3, 4, 5, 6, 7, 8, 0)
     board, _, _ = s
-    return 0
+    for idx in range (0,9):
+        goal_index = goal.index(board[idx])
+        if ((idx % 3) != (goal_index % 3)):
+            column_move +=1
+        if ((idx // 3)!= (goal_index // 3)):
+            row_move +=1
+    h_move = row_move + column_move
+    return h_move
